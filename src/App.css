@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background-image: url("../images/self.jpg"); */
+  background-color: rgb(47, 47, 47);
+  background-size:cover;  
+  /* display: flex;
+  justify-content: center; */
+  /* align-items: center;
+  height: 100%; */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App{
+  display: flex;
+  height: 500px;  
+  align-items: center;
+  flex-direction: column  ;
+ 
+}
+.myImage {
+    width: 15%;
+    height: 10%;
+    border-radius: 50%;
+}
+
+.home-button{
+  position: fixed;  
+  width: 5%;
+  left:20px;
+  top:4%;  
+  background-color: transparent;
+}
+
+.home-button:hover{
+  cursor: pointer;
+}
+
+.HamburgerIcon{
+  position: fixed;
+  top: 4%; 
+  right: 10px;
+  z-index: 2000;
+  background-color: transparent  
+}
+
+
+/* @media (max-width: 600px){
+  
+.HamburgerIcon { 
+  position: fixed;
+  right: 10px;
+ }     
+} */
+
+/* @media (min-width: 599px ) and (max-width: 992px){
+  .HamburgerIcon {   left: 92%;  }    
+} */
+
+/* .side-menu-item{
+  margin: 2em;
+} */
+
+/* .side-menu-main-display-container{
+  display: flex;  
+  
+} */
+/* .main-display{
+  display: flex;
+  width: 100%;
+  background-color: dodgerblue;
+} */
+
+.intro-text-container{
+  display: flex;
+  float:right !important;
+  flex-direction: column; 
+  height: 500px;
+  justify-content: center;
+  color: #CACACA;
+  align-items: center;
+}
+
+.my-name{
+  font-size: 3em;
+}
+
+.my-intro{
+  font-size: 2em;
+  /* margin-left:18%; */
+}
+
+.go-down-arrow{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: 25px;
+  /* float:right !important;
+  flex-direction: column; 
+  justify-content: center; */
+  color: #CACACA;
+  align-items: center;
+}
+
+.go-down-arrow>div>p{
+  position: relative;
+  left: -23px;
+}
+
+
+.go-down-arrow-1, .go-down-arrow-2 {
+    width: 40px;
+    height: 2px;
+    /* margin: 10px 1px; */
+    background-color:#7a7a7a;
+    margin: -1px;
+}
+
+  .go-down-arrow-1{
+    position: relative;
+    left:19px;
+    transform: rotate(160deg);
+  }
+
+  .go-down-arrow-2{
+    position: relative;
+    left:-19px;
+    transform: rotate(-160deg);
+  }
+
+  .go-down-arrow:hover{
+    transform:translate()
+  }
+
+@media (max-width: 600px){  
+.intro-text-container { 
+  font-size: x-small;
+ }     
+}
