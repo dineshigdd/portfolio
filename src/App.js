@@ -20,12 +20,21 @@ class App extends React.Component {
   
   componentDidMount(){
     this.showMainMenuOptions();  
+    this.setState({ footer: <div className="row">
+    <div className="col  go-down-arrow">
+        <div><p>See my work</p>
+            <div className="go-down-arrow-1"></div>
+            <div className="go-down-arrow-2"></div>
+        </div>
+    </div>
+  </div>
+    });
   }
 
   showMainMenuOptions(option){
      switch(option){       
        case "aboutme" :
-          this.setState( { currentScreen : <AboutMe /> }) ;
+          this.setState( { currentScreen : <AboutMe /> , footer:''}) ;
           break;     
       case "contactme":
         this.setState({ currentScreen : <ContactMe />});
@@ -33,9 +42,10 @@ class App extends React.Component {
       case "CV":
         this.setState({ currentScreen: <CurriculumVitae />});
         break;
-      default: this.setState( { currentScreen: (<div className="col intro-text-container">   
-      <span className="my-name">Hi, I am Daminda Dinesh</span>
-      <span className="my-intro">Your Full-Stack Developer</span>
+      default: this.setState( { currentScreen: (
+      <div className="col intro-text-container">   
+        <span className="my-name">Hi, I am Daminda Dinesh</span>
+        <span className="my-intro">Your Full-Stack Developer</span>
       </div>) });
         
      }
@@ -57,12 +67,7 @@ class App extends React.Component {
                 {   this.state.currentScreen } 
                       
         </div>         
-        <div className="col go-down-arrow">
-                <div><p>See my work</p>
-                 <div className="go-down-arrow-1"></div>
-                 <div className="go-down-arrow-2"></div>
-                 </div>
-          </div>
+              { this.state.footer }
     </div>
     );
   }

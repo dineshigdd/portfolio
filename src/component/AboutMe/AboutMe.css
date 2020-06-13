@@ -1,3 +1,15 @@
-.myImage{
-    width:65px;
+.myImage-wrapper{
+    display: flex;
+    justify-content: center;
 }
+
+.myImage{
+    width: 40%;
+    height: 10%;
+    border-radius: 50%;
+}
+
+.about-me-row{
+    margin: 4.5% 0 4.5% 0;
+}
+
