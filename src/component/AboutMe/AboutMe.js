@@ -7,24 +7,30 @@ class AboutMe extends React.Component{
     
     render(){        
         return(
-            <div className="container">
-                <title>About Me</title>
+            <div className="container">                
                 <div className="row about-me-row">
-                    <div className="col myImage-wrapper">
+                    <div className="col s12 myImage-wrapper">
                         <img className="myImage" src={ myImage } alt="myImage"/>
-                    </div>
-                </div>
-                <div className="row about-me-row">
-                    <div className="col">
-                        <div><p>My name is Dinesh. I am enthiasitice about web developement and programming
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
+                    </div>               
+              
+                    <div className="col s12">
+                        <div>
+                            <p>My name is Dinesh. I am enthiasitice about web developement and programming
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
                         </div>
+                    </div>                   
+                    <div class="col">
+                        <a href="#"><i class="fa fa-facebook fa-2x fa-fw" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-twitter fa-2x  fa-fw" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-linkedin-square fa-2x fa-fw" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-github-square fa-2x fa-fw" aria-hidden="true"></i></a>
                     </div>
+    
                 </div>
             </div>
 
