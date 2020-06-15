@@ -13,7 +13,7 @@ class AboutMe extends React.Component{
                         <img className="myImage" src={ myImage } alt="myImage"/>
                     </div>               
               
-                    <div className="col s12">
+                    <div className="col s12 my-description-wrapper">
                         <div>
                             <p>My name is Dinesh. I am enthiasitice about web developement and programming
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
@@ -24,7 +24,7 @@ class AboutMe extends React.Component{
                             </p>
                         </div>
                     </div>                   
-                    <div class="col">
+                    <div class="col s12 social-media-icons">
                         <a href="#"><i class="fa fa-facebook fa-2x fa-fw" aria-hidden="true"></i></a>
                         <a href="#"><i class="fa fa-twitter fa-2x  fa-fw" aria-hidden="true"></i></a>
                         <a href="#"><i class="fa fa-linkedin-square fa-2x fa-fw" aria-hidden="true"></i></a>

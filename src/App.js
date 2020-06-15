@@ -37,10 +37,10 @@ class App extends React.Component {
           this.setState( { currentScreen : <AboutMe /> , footer:''}) ;
           break;     
       case "contactme":
-        this.setState({ currentScreen : <ContactMe />});
+        this.setState({ currentScreen : <ContactMe /> , footer:''});
         break;
       case "CV":
-        this.setState({ currentScreen: <CurriculumVitae />});
+        this.setState({ currentScreen: <CurriculumVitae /> , footer:''});
         break;
       default: this.setState( { currentScreen: (
       <div className="col intro-text-container">   
