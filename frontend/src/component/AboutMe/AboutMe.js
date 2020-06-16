@@ -1,5 +1,5 @@
 import React from 'react';
-import './AboutMe.css';
+import '../AboutMe/AboutMe.css'
 import myImage from "../../images/self.jpg";
 
 class AboutMe extends React.Component{
