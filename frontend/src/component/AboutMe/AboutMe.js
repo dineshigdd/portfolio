@@ -25,7 +25,7 @@ class AboutMe extends React.Component{
                         </div>
                     </div>                   
                     <div class="col s12 social-media-icons">
-                        <a href="#"><i class="fa fa-facebook fa-2x fa-fw" aria-hidden="true"></i></a>
+                        <a href="https://www.facebook.com/daminda.me/"><i class="fa fa-facebook fa-2x fa-fw" aria-hidden="true"></i></a>
                         <a href="#"><i class="fa fa-twitter fa-2x  fa-fw" aria-hidden="true"></i></a>
                         <a href="#"><i class="fa fa-linkedin-square fa-2x fa-fw" aria-hidden="true"></i></a>
                         <a href="#"><i class="fa fa-github-square fa-2x fa-fw" aria-hidden="true"></i></a>
