@@ -6,12 +6,12 @@ const db = require('./config/keys').mongoURI;
 const users = require('./routes/api/users') 
 
 
-
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 // app.get("/", (req, res) => res.send("Hello World"));
 app.use("/api/users",users);
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+
 
 mongoose
     .connect( db, { useNewUrlParser : true })

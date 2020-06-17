@@ -7,6 +7,11 @@ const MessageSchema = new Schema({
         required: true
     },
 
+    date: {
+        type: Date,
+        default: Date.now
+      },
+
     user:{
         type: Schema.Types.ObjectId,
         ref: 'user'
