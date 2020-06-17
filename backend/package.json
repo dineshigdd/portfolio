@@ -5,7 +5,10 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "frontend-install": "npm install frontend",
+    "frontend": "cd ../frontend && npm start frontend",
+    "dev": "concurrently \"npm run server\" \"npm run frontend\""
   },
   "author": "dinesh",
   "license": "ISC",
@@ -16,6 +19,7 @@
     "mongoose": "^5.9.19"
   },
   "devDependencies": {
+    "concurrently": "^5.2.0",
     "nodemon": "^2.0.4"
   }
 }

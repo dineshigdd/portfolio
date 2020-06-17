@@ -3,7 +3,7 @@ import 'materialize-css/dist/css/materialize.min.css';
 import './App.css'
 import AboutMe from './component/AboutMe/AboutMe';
 import HamburgerIcon from './component/BurgerIcon/HamburgerIcon'
-import { ContactMe } from './component/ContactMe/ContactMe';
+import ContactMe  from './component/ContactMe/ContactMe';
 import CurriculumVitae from './component/CurriculumVitae/CurriculumVitae';
 import HomeButton from './images/home.svg';
 

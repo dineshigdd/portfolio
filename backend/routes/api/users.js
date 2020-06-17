@@ -5,18 +5,17 @@ const Message = require('../../models/message');
 
 
 
-router.get("/test", (req, res) => res.json( req.body.name ));
+router.get("/test", (req, res) => res.json({msg : "this is users"}));
 
 router.post("/sendmsg",(req, res) => {
-   
+   const CONFIRMATION = "Your message has been submited. Thank you"
     User.findOne({ email: req.body.email })
       .then(user => {
         if (user) {
             new Message({
             message : req.body.message,
             user: user._id
-          }).save();
-
+          }).save().then(() => res.json({ msgConfirm : CONFIRMATION }))
         } else {
           // Otherwise create a new user
           const newUser = new User({
@@ -33,9 +32,9 @@ router.post("/sendmsg",(req, res) => {
                     user: newUser._id
                 });
 
-                message.save();
+                message.save().then(() => res.json({ msgConfirm : CONFIRMATION }))
   
-                res.json({ user: newUser, msg: message })
+                // res.json({ user: newUser, msg: message })
         }
       })
   })
