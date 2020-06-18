@@ -9,7 +9,7 @@
     "frontend-install": "npm install frontend",
     "frontend": "cd ../frontend && npm start frontend",
     "dev": "concurrently \"npm run server\" \"npm run frontend\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install frontend && npm run build ../frontend"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install frontend && npm run build frontend"
   },
   "author": "dinesh",
   "license": "ISC",
