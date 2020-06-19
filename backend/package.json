@@ -8,7 +8,7 @@
     "server": "nodemon server.js",
     "frontend-install": "npm install frontend",
     "frontend": "frontend && npm start frontend",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install frontend && npm run build frontend"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
     
   },
   "author": "dinesh",
