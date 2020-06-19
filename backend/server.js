@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const http = require('http').Server(app);
 const path = require('path');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
@@ -28,9 +27,5 @@ if (process.env.NODE_ENV === 'production') {
     }
 
 const port = process.env.PORT || 5000;
-http.listen(port, () => {
-  console.log('listening on *:' + port);
-});
-
-// app.listen( port, () => console.log( `Server is running on port ${port}`))
+app.listen( port, () => console.log( `Server is running on port ${port}`))
 
