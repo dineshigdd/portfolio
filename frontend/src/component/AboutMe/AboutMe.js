@@ -24,11 +24,11 @@ class AboutMe extends React.Component{
                             </p>
                         </div>
                     </div>                   
-                    <div class="col s12 social-media-icons">
-                        <a href="https://www.facebook.com/daminda.me/"><i class="fa fa-facebook fa-2x fa-fw" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-twitter fa-2x  fa-fw" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-linkedin-square fa-2x fa-fw" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-github-square fa-2x fa-fw" aria-hidden="true"></i></a>
+                    <div className="col s12 social-media-icons">
+                        <a href="https://www.facebook.com/daminda.me/"><i className="fab fa-facebook fa-2x fa-fw" aria-hidden="true"></i></a>
+                        <a href="#"><i className="fab fa-twitter fa-2x  fa-fw" aria-hidden="true"></i></a>
+                        <a href="#"><i className="fab fa-linkedin fa-2x fa-fw" aria-hidden="true"></i></a>
+                        <a href="#"><i className="fab fa-github-square fa-2x fa-fw" aria-hidden="true"></i></a>
                     </div>
     
                 </div>

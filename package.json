@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "frontend/src/index.js",
+  "scripts": {
+    "dev": "concurrently \"cd backend && npm run server\" \"cd frontend && npm start\" "
+   
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dineshigdd/portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dineshigdd/portfolio/issues"
+  },
+  "homepage": "https://github.com/dineshigdd/portfolio#readme",
+  "devDependencies": {
+    "concurrently": "^5.2.0"
+  }
+}
