@@ -8,7 +8,6 @@
     "server": "nodemon server.js",
     "frontend-install": "npm install frontend",
     "frontend": "cd ../frontend && npm start frontend"
-    
   },
   "author": "dinesh",
   "license": "ISC",
