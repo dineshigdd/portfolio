@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "backend/server.js",
   "scripts": {
     "dev": "concurrently \"cd backend && npm run server\" \"cd frontend && npm start\" ",   
     "frontend-build": "cd frontend && npm run build",

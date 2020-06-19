@@ -2,7 +2,7 @@
   "name": "portfolio-server",
   "version": "1.0.0",
   "description": "this is my porfolio server side",
-  "main": "backend/server.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js"
