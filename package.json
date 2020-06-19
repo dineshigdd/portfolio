@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "concurrently \"cd backend && npm run server\" \"cd frontend && npm start\" ",   
-    "frontend": "cd frontend && npm run build",
+    "frontend-build": "cd frontend && npm run build",
     "frontend-install": "cd frontend && npm install",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix ./frontend && npm run build --prefix ./frontend"
+    "heroku-postbuild": "npm run frontend-install && npm run frontend-build"
   },
   "repository": {
     "type": "git",
