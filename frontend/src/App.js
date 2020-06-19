@@ -73,9 +73,7 @@ class App extends React.Component {
   // }
 
 render(){
-  return(
-  <dev>Hello World this is a test</dev>
-  );
+  return(  <div>Hello World this is a test</div> );
 }
 
 }
