@@ -1,14 +1,14 @@
-// import React from 'react';
+import React from 'react';
 
-// class CurriculumVitae extends React.Component {
+class CurriculumVitae extends React.Component {
 
-//     render(){
-//         return(
-//             <div>
-//                 this is my CV
-//             </div>
-//         );
-//     }
-// }
+    render(){
+        return(
+            <div>
+                this is my CV
+            </div>
+        );
+    }
+}
 
-// export default CurriculumVitae;
+export default CurriculumVitae;
