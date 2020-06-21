@@ -1,11 +1,10 @@
+const path = require('path');
 const express = require("express");
 const app = express();
-const path = require('path');
-const bodyParser = require('body-parser');
+const db = require('./config/keys').mongoURI;
 const mongoose = require('mongoose');
-const db = require('/config/keys').mongoURI;
+const bodyParser = require('body-parser');
 const users = require('./routes/api/users') 
-
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
