@@ -8,7 +8,7 @@ const users = require('./routes/api/users')
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.get("/", (req, res) => res.send("Hello dinesh"));
+// app.get("/", (req, res) => res.send("Hello dinesh"));
 app.use("/api/users",users);
 
 
