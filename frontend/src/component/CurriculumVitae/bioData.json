@@ -1,0 +1,36 @@
+{
+    "technical":{
+            "language": [ "JavaScript", "Java","PHP","C++","HTML","CSS"],
+            "Framework":["React","Redux","Wordpress"],
+            "OS":["Windows", "LINUX"]
+    },
+    "education":[
+        {
+        "school":"Western Governors University",
+        "graduationYear":2019,
+        "degree":"Bachelors in Software Developement",
+        "major": "Software Developement"       
+        },
+        {
+        "school":"Los Angeles Valley College",
+        "graduationYear":2016,
+        "degree":"2-year Associate Degree",
+        "major": "Computer Science"    
+        }
+    ],
+    "experience":
+        {
+        "workExperience":{
+            "company": "Gateway Institute of Information Technology",
+            "fromDate": "2006-01-12",
+            "toDate": "2006-11-12",
+            "title":"Computer Instructor",
+            "workDone":"Conduct Courses and Co-ordinating the Institute"    
+        },
+    
+        "projects":{
+            "volunteering": ["ACE","online project"]
+        }
+    }
+    
+}
