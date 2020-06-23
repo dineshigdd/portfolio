@@ -25,10 +25,10 @@ class AboutMe extends React.Component{
                         </div>
                     </div>                   
                     <div className="col s12 social-media-icons">
-                        <a href="https://www.facebook.com/daminda.me/"><i className="fab fa-facebook fa-2x fa-fw" aria-hidden="true"></i></a>
-                        {/* <a href="#"><i className="fab fa-twitter fa-2x  fa-fw" aria-hidden="true"></i></a>
-                        <a href="#"><i className="fab fa-linkedin fa-2x fa-fw" aria-hidden="true"></i></a>
-                        <a href="#"><i className="fab fa-github-square fa-2x fa-fw" aria-hidden="true"></i></a> */}
+                        <a href="https://www.facebook.com/daminda.me/" target="_blank"><i className="fab fa-facebook fa-2x fa-fw" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/DineshForIT" target="_blank"><i className="fab fa-twitter fa-2x  fa-fw" aria-hidden="true"></i></a>
+                        <a href="https://www.linkedin.com/in/damindadinesh/" target="_blank"><i className="fab fa-linkedin fa-2x fa-fw" aria-hidden="true"></i></a>
+                        <a href="https://github.com/dineshigdd" target="_blank"><i className="fab fa-github-square fa-2x fa-fw" aria-hidden="true"></i></a>
                     </div>
     
                 </div>
