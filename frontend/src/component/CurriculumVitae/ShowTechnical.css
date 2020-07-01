@@ -1,0 +1,18 @@
+.language-item{
+    list-style: none;
+    height: 60px;
+}
+
+.showTechnical-wrapper{
+  margin: auto;
+  width: 70%;
+  
+}
+
+@media (max-width: 600px){
+    .showTechnical-wrapper{
+        margin: 0;
+        background-color: tomato;
+    }
+
+}

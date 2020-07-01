@@ -1,0 +1,54 @@
+.levelIndicator-Hzline {
+    position: relative;
+    left: 20%;
+    bottom: 22px;
+    width: 500px;
+    height: 2px;
+    background-color: wheat;
+    margin: 10px 0;
+}
+
+.levelIndicator-Vline{
+    position: relative;
+    bottom: 9px;
+    width: 10px;
+    height: 20px;
+    background-color: wheat;
+    margin: 10px 0;
+}
+
+.level-title{
+    position: relative;
+    left: 15%;
+    margin-bottom: 25px;
+    padding-top:10px;
+}
+
+.level-title>span:nth-child(2){
+    position: relative;
+    left:28%
+}
+
+.level-title>span:nth-child(3){
+    position: relative;
+    left:40%
+}
+
+@media (max-width: 600px){
+
+    .levelIndicator-Hzline {
+        position: relative;
+        left: 15%;
+    }
+    
+    .level-title>span:nth-child(2){
+        position: relative;
+        left:10%;
+        background-color: tomato;
+    }
+
+    .level-title>span:nth-child(3){
+        position: relative;
+        left:19%
+    }
+}

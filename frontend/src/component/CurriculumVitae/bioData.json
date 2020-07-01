@@ -1,6 +1,10 @@
 {
     "technical":{
-            "language": [ "JavaScript", "Java","PHP","C++","HTML","CSS"],
+            "language": [   { "name": "JavaScript","level":"Advanced"},
+                            { "name":"HTML" ,"level":"Advanced"},
+                            { "name":"Java","level":"Intermediate" },
+                            { "name": "PHP" , "level": "intermediate"}
+                        ],
             "Framework":["React","Redux","Wordpress"],
             "OS":["Windows", "LINUX"]
     },
@@ -14,7 +18,7 @@
         {
         "school":"Los Angeles Valley College",
         "graduationYear":2016,
-        "degree":"2-year Associate Degree",
+        "degree":"2-year Associate Degree in Computer Science",
         "major": "Computer Science"    
         }
     ],

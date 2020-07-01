@@ -1,0 +1,11 @@
+.showEducation-wrapper>ul>li{
+    display: flex;
+    flex-direction: row;    
+    justify-content: left;
+    padding-left: 10%;
+    
+}
+
+.year,.college,.degree{
+    margin: 20px;
+}
