@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import 'materialize-css/dist/css/materialize.min.css';
 import './App.css'; 
 import AboutMe from './component/AboutMe/AboutMe';
@@ -6,6 +7,8 @@ import HamburgerIcon from './component/BurgerIcon/HamburgerIcon'
 import ContactMe  from './component/ContactMe/ContactMe';
 import CurriculumVitae from './component/CurriculumVitae/CurriculumVitae';
 import HomeButton from './images/home.svg';
+import { createInitialCvUI } from './component/CurriculumVitae/cvInterface';
+
 
 
 
@@ -15,7 +18,12 @@ class App extends React.Component {
     super(props);
 
     this.showMainMenuOptions = this.showMainMenuOptions.bind(this);
-    this.state = {};  
+    this.HamburgerButtonAction = this.HamburgerButtonAction.bind(this);
+    this.rerenderParentCallback = this.rerenderParentCallback.bind(this);
+    this.state = {
+      isDropDownActive : false
+    }
+   // this.state = {};  
   }
   
   componentDidMount(){
@@ -31,6 +39,19 @@ class App extends React.Component {
     });
   }
 
+  HamburgerButtonAction(){    
+    var element = document.querySelector(".container");
+    element.classList.toggle("change");
+    
+    this.setState(  state=> ( { isDropDownActive : ! state.isDropDownActive }));
+      
+     
+  
+}
+rerenderParentCallback() {
+  this.forceUpdate();
+}
+
   showMainMenuOptions(option){
      switch(option){       
        case "aboutme" :
@@ -39,17 +60,28 @@ class App extends React.Component {
       case "contactme":
         this.setState({ currentScreen : <ContactMe /> , footer:''});
         break;
-      case "CV":
-        this.setState({ currentScreen: <CurriculumVitae /> , footer:''});
+      case "CV":      
+        
+        // ReactDOM.render( <CurriculumVitae 
+        //   initialScreen= { [ true,initialScreen] }/>,document.getElementById('cv-main-display'));
+        
+          const initialScreen = createInitialCvUI(); 
+           this.setState( { currentScreen: <CurriculumVitae 
+            initialScreen= { initialScreen }  
+            test = { true }
+            rerenderParentCallback = { this.rerenderParentCallback }/> , footer:''});
         break;
       default: this.setState( { currentScreen: (
       <div className="col intro-text-container">   
         <span className="my-name">Hi, I am Daminda Dinesh</span>
         <span className="my-intro">Your Full-Stack Developer</span>
       </div>) });
-        
+       break;
      }
   }
+
+  
+  
 
   render(){   
     return(
@@ -61,7 +93,9 @@ class App extends React.Component {
               </div>
               <div className="col HamburgerIcon">      
                                
-                        <HamburgerIcon showMainMenuOptions = { this.showMainMenuOptions }/>                
+                        <HamburgerIcon 
+                            showMainMenuOptions = { this.showMainMenuOptions }
+                            HamburgerButtonAction = { this.HamburgerButtonAction } />                
               </div>   
                     
                 {   this.state.currentScreen } 

@@ -4,24 +4,24 @@ import './HamburgerIcon.css'
 
 
 class HamburgerButton extends React.Component{
-    constructor(props){
-        super(props);     
+    // constructor(props){
+    //     super(props);     
         
-        this.state = {
-            isDropDownActive : false
-        }
-    }
+        // this.state = {
+        //     isDropDownActive : false
+        // }
+    // }
    
     componentDidMount() {
         // Auto initialize all the things!
         M.AutoInit();
     }
     
-    HamburgerButtonAction(){    
-        var element = document.querySelector(".container");
-        element.classList.toggle("change");
+   // HamburgerButtonAction(){    
+        // var element = document.querySelector(".container");
+        // element.classList.toggle("change");
         
-        this.setState(  state=> ( { isDropDownActive : ! state.isDropDownActive }));
+        // this.setState(  state=> ( { isDropDownActive : ! state.isDropDownActive }));
           
         // document.addEventListener('DOMContentLoaded', function() {
         //     var elems = document.querySelectorAll('.dropdown-trigger');
@@ -29,17 +29,17 @@ class HamburgerButton extends React.Component{
         //   });
             
       
-    }
+    //}
 
   
 
     render(){    
-        const { showMainMenuOptions } = this.props;
+        const { showMainMenuOptions , HamburgerButtonAction } = this.props;
         return(
         <div>
         <div className="container dropdown-trigger" 
          href='#' data-target='dropdown1'
-         onClick={ this.HamburgerButtonAction.bind(this) }>
+         /*onClick={ HamburgerButtonAction }*/>
             <div className="bar1"></div>
             <div className="bar2"></div>
             <div className="bar3"></div>
