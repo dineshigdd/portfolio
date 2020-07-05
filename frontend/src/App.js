@@ -6,6 +6,7 @@ import HamburgerIcon from './component/BurgerIcon/HamburgerIcon'
 import ContactMe  from './component/ContactMe/ContactMe';
 import CurriculumVitae from './component/CurriculumVitae/CurriculumVitae';
 import HomeButton from './images/home.svg';
+import { createInitialCvUI } from './component/CurriculumVitae/cvInterface';
 
 
 
@@ -40,7 +41,8 @@ class App extends React.Component {
         this.setState({ currentScreen : <ContactMe /> , footer:''});
         break;
       case "CV":
-        this.setState({ currentScreen: <CurriculumVitae /> , footer:''});
+        const initialState = createInitialCvUI()
+        this.setState({ currentScreen: <CurriculumVitae initialState = { initialState }/> , footer:''});
         break;
       default: this.setState( { currentScreen: (
       <div className="col intro-text-container">   
