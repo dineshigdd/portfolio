@@ -6,19 +6,24 @@ import './ShowTechnical.css';
 const ShowTechnical = () =>{
   
   return (
+    <div>
+      <div className="cv-tec-link-move">
+          <h2>Technical</h2>
+      </div>
     <div className="showTechnical-wrapper">
-    <div className="level-title">
-        <span>beginner</span>
-        <span>intermediate</span>
-        <span>Advanced</span>
-    </div>
-    { BioData.technical.language.map( (element, idx) => 
-    <li className="language-item" key={idx}>{ element.name }  <div className="levelIndicator-Hzline">
-      <div className="levelIndicator-Vline"></div></div> </li>
-    
-    
-    ) }
-    
+          <div className="level-title">
+              <span>beginner</span>
+              <span>intermediate</span>
+              <span>Advanced</span>
+          </div>
+          { BioData.technical.language.map( (element, idx) => 
+          <li className="language-item" key={idx}>{ element.name }  <div className="levelIndicator-Hzline">
+            <div className="levelIndicator-Vline"></div></div> </li>
+          
+          
+          ) }
+          
+          </div>
     </div>
   );
 }

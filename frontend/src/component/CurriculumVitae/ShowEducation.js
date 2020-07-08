@@ -6,6 +6,10 @@ import './showEducation.css'
 const ShowEducation = () =>{
   
   return (
+    <div>
+      <div className="cv-edu-link-move">
+          <h2>Education</h2>
+      </div>    
     <div className="showEducation-wrapper">
       <ul>
        
@@ -16,9 +20,8 @@ const ShowEducation = () =>{
            <div className="degree">{ element.degree }</div> 
           </li> )}       
      
-      </ul>       
-    
-    
+      </ul>      
+    </div>
     </div>
   );
 }

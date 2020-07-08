@@ -1,132 +1,88 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import '../CurriculumVitae/CurriculumVitae.css'
-import { useState, useEffect} from 'react';
+import { useState, useEffect, useReducer} from 'react';
 
 import ShowTechnical from '../CurriculumVitae/ShowTechnical';
 import ShowEducation from '../CurriculumVitae/ShowEducation';
 import ShowExperience from '../CurriculumVitae/ShowExperience';
 import { createInitialCvUI } from './cvInterface';
 
-function showDisplayOptions(choice){
-        switch(choice){
+function init(initialState){
+    return { result : initialState  };
+}
+
+function removeContainerStyles(){
+    var element = document.getElementById("cv-main-display");
+    element.classList.remove("cv-main-display");
+}
+
+function reducer(state, action){
+        switch(action.type){
             case "technical":      
-             try{
-               document.getElementById('experience-link').parentNode.remove();
-               document.getElementById('education-link').parentNode.remove();
-               document.getElementById('technical-link').parentNode.className = 'cv-tec-link-move';
-               document.getElementById("cv-main-display").className = 'cv-main-display-move';  
-             return  <ShowTechnical />;
-          
-             }catch{ }               
+            
+             removeContainerStyles();
+
+             state.result = <ShowTechnical/>;      
+             return  { result : state.result};              
              
             case "education":
-            try{
-               document.getElementById('technical-link').parentNode.remove();   
-               document.getElementById('experience-link').parentNode.remove();           
-               document.getElementById('education-link').parentNode.className = 'cv-edu-link-move';
-               document.getElementById("cv-main-display").className = 'cv-main-display-move';              
-               return <ShowEducation/>;
-            }catch{}
+               removeContainerStyles();
+               state.result = <ShowEducation/>;              
+               return  { result : state.result};            
                
             case "experience":
-                try{
-                document.getElementById('technical-link').parentNode.remove();   
-                document.getElementById('education-link').parentNode.remove();           
-                document.getElementById('experience-link').parentNode.className = 'cv-exp-link-move';
-                document.getElementById("cv-main-display").className = 'cv-main-display-move';     
-                return <ShowExperience />;
-                }catch{}
-            default:  
-                //  document.getElementById("cv-main-display").innerHTML = 
-                //  BioData.experience.projects.volunteering[0];
-                 
+                removeContainerStyles();  
+                state.result = <ShowExperience />;
+                return  { result : state.result};
+              
+            case "reset": 
+                var element = document.getElementById("cv-main-display");
+                element.className = "cv-main-display";
+                 return init(action.payload);
         }
 }
 
- 
 
 
-
-const CurriculumVitae = (props) => {     
-
-    const { initialState } = props;
-     
-     const [ upperDisplay, setUpperDisplay] = useState(initialState);
-
-     const [ mainDisplay, setMainDisplay ] = useState();
-
-    
-     useEffect(() => {
-        if( upperDisplay !== initialState ){        
-            setUpperDisplay('')
-            setUpperDisplay( 
-               
-                <div className="test">{ initialState }</div> 
-            ,[initialState]);
-            setMainDisplay();
-            showDisplayOptions();
-
-           
-            
-        }
-    },[props.initialState]);
-
-
-    // useEffect(()=>  document.getElementById("technical-link").parentNode.onclick = () =>{
-    //     const resultDiv = document.getElementById('technical-link').parentNode       
-    //      setUpperDisplay( 
-    //         resultDiv
-    //      )
-    //    }
+const CurriculumVitae = ({initialState}) => {     
+    const[ counter ,setCounter ] = useState(0);
+    const [state, dispatch] = useReducer(reducer, initialState,init);
        
-    // ) 
-
-   
-
-    useEffect(()=>  document.getElementById("technical-link").parentNode.onclick = () =>                   
-         setMainDisplay(showDisplayOptions("technical")),[]
-    )
+    const tecSubmit = () => document.getElementById("technical-link").parentNode.onclick = 
+        () => dispatch({ type: "technical"})
     
-    
-    useEffect(()=>  document.getElementById("education-link").parentNode.onclick = () =>
-        setMainDisplay(showDisplayOptions("education")),[]
-    )
+    const eduSubmit = () => document.getElementById("education-link").parentNode.onclick = 
+        () => dispatch({ type: "education"})
 
-          
-    useEffect(()=>  document.getElementById("experience-link").parentNode.onclick = () =>
-        setMainDisplay(showDisplayOptions("experience")),[]
-    )
+    const expericeSubmit = () => document.getElementById("experience-link").parentNode.onclick = 
+        () => dispatch({ type: "experience"})
 
-    // useEffect(() => { setDisplay(props.initialState) },[props.initialState])
-    
-    
-
-
+    useEffect(
         
-            return(
-            <div id="test">
+        ()=>{
+             tecSubmit()      
+             eduSubmit()   
+             expericeSubmit()           
+        },[counter]
+    )
+   
+    
+    useEffect(
+     ()=>{
+        setCounter(counter + 1)  
+             dispatch({type: 'reset', payload: initialState })
+     } ,[initialState])
+
+    return(
+        //  <div id="test">
+            <div id="cv-main-display" className="cv-main-display">    
+              
+                 {  state.result }
                 
-                { upperDisplay }
-                {/* <ul className="cv-main-nav">
-                    <li className="cv-main-links"
-                      onClick={ () => setMainDisplay(showDisplayOptions("technical"))
-                          
-                      }>
-                        <span id="technical-link">technical</span></li>
-                    <li className="cv-main-links"  
-                        onClick={ () => setMainDisplay( showDisplayOptions("experience")) }>
-                        <span id="experience-link">Experience</span></li>
-                    <li className="cv-main-links"  
-                        onClick={ () => setMainDisplay( showDisplayOptions("education")) }>
-                        <span id="education-link">Education</span></li>
-                </ul> */}
-                
-                    <div id="cv-main-display">
-                        { mainDisplay }
-                    </div>
-               
-            </div>
+             </div>
+              
+            
         );
     
 }

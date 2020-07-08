@@ -24,7 +24,11 @@ import React  from 'react';
 
    export function createInitialCvUI(){
     return (
-   <ul className="cv-main-nav">
+        // <>
+        //     <button id="firstbtn">Main Menu</button>
+        //     <button id="testbtn">test btn</button>
+        // </>
+   <ul className="cv-main-menu" id="cv-main-menu">
    <li className="cv-main-links">
        <span id="technical-link">technical</span></li>
    <li className="cv-main-links">
@@ -34,3 +38,4 @@ import React  from 'react';
 </ul> 
     );
 }
+

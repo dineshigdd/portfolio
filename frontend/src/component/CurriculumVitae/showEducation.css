@@ -1,4 +1,6 @@
 .showEducation-wrapper>ul>li{
+    background-color:#1f6b66; 
+    width: 900px;
     display: flex;
     flex-direction: row;    
     justify-content: left;

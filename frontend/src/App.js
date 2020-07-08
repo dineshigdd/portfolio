@@ -41,8 +41,8 @@ class App extends React.Component {
         this.setState({ currentScreen : <ContactMe /> , footer:''});
         break;
       case "CV":
-        const initialState = createInitialCvUI()
-        this.setState({ currentScreen: <CurriculumVitae initialState = { initialState }/> , footer:''});
+          const initialState = createInitialCvUI();
+          this.setState({ currentScreen: <CurriculumVitae initialState= {initialState } /> , footer:''});
         break;
       default: this.setState( { currentScreen: (
       <div className="col intro-text-container">   
@@ -53,6 +53,7 @@ class App extends React.Component {
      }
   }
 
+ 
   render(){   
     return(
     <div className="container App">        
