@@ -7,9 +7,9 @@ const ShowExperience = () =>{
   return (
     <div>
       <div className="cv-exp-link-move">
-          <h2>Experience</h2>
+          <p>Experience</p>
       </div>
-      <div className="showTechnical-wrapper">
+      <div className="showTechnical-wrapper cv-main-display-move">
       <p>This is experiencece</p>
       </div>
       

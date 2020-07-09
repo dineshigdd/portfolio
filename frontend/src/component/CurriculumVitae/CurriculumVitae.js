@@ -12,33 +12,34 @@ function init(initialState){
     return { result : initialState  };
 }
 
-function removeContainerStyles(){
+function addContainerStyles(){
     var element = document.getElementById("cv-main-display");
-    element.classList.remove("cv-main-display");
+    element.className = "cv-main-display";
 }
 
 function reducer(state, action){
         switch(action.type){
             case "technical":      
             
-             removeContainerStyles();
+             addContainerStyles();
 
              state.result = <ShowTechnical/>;      
              return  { result : state.result};              
              
             case "education":
-               removeContainerStyles();
+               addContainerStyles();
                state.result = <ShowEducation/>;              
                return  { result : state.result};            
                
             case "experience":
-                removeContainerStyles();  
+                addContainerStyles();  
                 state.result = <ShowExperience />;
                 return  { result : state.result};
               
             case "reset": 
                 var element = document.getElementById("cv-main-display");
-                element.className = "cv-main-display";
+                element.classList.remove("cv-main-display");
+                
                  return init(action.payload);
         }
 }
@@ -76,11 +77,11 @@ const CurriculumVitae = ({initialState}) => {
 
     return(
         //  <div id="test">
-            <div id="cv-main-display" className="cv-main-display">    
+            <div id="cv-main-display">    
               
                  {  state.result }
-                
-             </div>
+              
+            </div>
               
             
         );

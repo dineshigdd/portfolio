@@ -8,9 +8,9 @@ const ShowTechnical = () =>{
   return (
     <div>
       <div className="cv-tec-link-move">
-          <h2>Technical</h2>
+          <p>Technical</p>
       </div>
-    <div className="showTechnical-wrapper">
+    <div className="showTechnical-wrapper cv-main-display-move">
           <div className="level-title">
               <span>beginner</span>
               <span>intermediate</span>
