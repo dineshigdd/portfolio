@@ -7,6 +7,9 @@ import ContactMe  from './component/ContactMe/ContactMe';
 import CurriculumVitae from './component/CurriculumVitae/CurriculumVitae';
 import HomeButton from './images/home.svg';
 import { createInitialCvUI } from './component/CurriculumVitae/cvInterface';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Portfolio from './component/Portfolio/Portfolio'
+
 
 
 
@@ -16,20 +19,24 @@ class App extends React.Component {
     super(props);
 
     this.showMainMenuOptions = this.showMainMenuOptions.bind(this);
-    this.state = {};  
+    this.state ={};
   }
   
   componentDidMount(){
     this.showMainMenuOptions();  
-    this.setState({ footer: <div className="row">
-    <div className="col  go-down-arrow">
-        <div><p>See my work</p>
-            <div className="go-down-arrow-1"></div>
-            <div className="go-down-arrow-2"></div>
-        </div>
-    </div>
-  </div>
-    });
+  //   this.setState({ footer: 
+    
+  //   <div className="row">
+  //   <div className="col  go-down-arrow">
+  //       <div>          
+  //            <p>See my work</p>
+  //            <ExpandMoreIcon style={ { fontSize:100 }} 
+  //             onClick={ () => this.showMainMenuOptions('portfolio') } />     
+         
+  //       </div>
+  //   </div>
+  // </div>
+  //   });
   }
 
   showMainMenuOptions(option){
@@ -44,11 +51,29 @@ class App extends React.Component {
           const initialState = createInitialCvUI();
           this.setState({ currentScreen: <CurriculumVitae initialState= {initialState } /> , footer:''});
         break;
-      default: this.setState( { currentScreen: (
-      <div className="col intro-text-container">   
-        <span className="my-name">Hi, I am Daminda Dinesh</span>
-        <span className="my-intro">Your Full-Stack Developer</span>
-      </div>) });
+      case "portfolio":
+        this.setState({ currentScreen : <Portfolio /> , footer:''});
+        break;
+      default: this.setState( { currentScreen: 
+        (<>
+            <div className="section">
+                <div className="col intro-text-container">   
+                  <span className="my-name">Hi, I am Daminda Dinesh</span>
+                  <span className="my-intro">Your Full-Stack Developer</span>
+                </div>  
+            </div>  
+            
+            <div className="section porfolio-col">
+              <div>     
+                    <p>See my work</p>
+                    <ExpandMoreIcon style={ { fontSize:100 } } 
+                      onClick={ () => this.showMainMenuOptions('portfolio') } />              
+              </div>
+            </div>
+        
+        </>
+      
+      ) });
         
      }
   }

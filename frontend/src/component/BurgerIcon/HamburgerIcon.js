@@ -19,8 +19,7 @@ class HamburgerButton extends React.Component{
     
     HamburgerButtonAction(){    
         var element = document.querySelector(".container");
-        element.classList.toggle("change");
-        
+        element.classList.toggle("change");        
         this.setState(  state=> ( { isDropDownActive : ! state.isDropDownActive }));
           
         // document.addEventListener('DOMContentLoaded', function() {

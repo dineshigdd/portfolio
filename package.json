@@ -14,12 +14,12 @@
     "frontend": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run frontend\"",
     "heroku-postbuild": "cd frontend && npm install && npm run build"
-    
-  
   },
   "author": "dinesh",
   "license": "ISC",
   "dependencies": {
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",

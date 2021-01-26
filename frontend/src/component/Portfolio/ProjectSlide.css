@@ -1,0 +1,83 @@
+.project-slide-container{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px,1fr));  
+    grid-gap: 50px 1.8em;
+    max-width: fit-content;  
+    text-align: center;
+    margin: 20px 0 50px 0;
+}
+
+.project-slide{
+    display: grid;
+    width: 200px;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    border-radius: 3px;   
+    background-color: white;
+    height: 10em;
+    padding: 10px;
+}
+
+
+.left:before{
+    top: calc(50% - 10px);
+    left: calc(8% - 5px);
+    right: auto;
+    z-index: 1000;
+    content: "";
+    display: block;
+    position: absolute;
+    height: 36px;
+    width: 2px;
+    background-color: tomato;
+    transform: rotate(45deg);
+    transform-origin: 50% 100% 0;
+}
+
+.left::after{
+    top: calc(50% - 10px);
+    left: calc(8% - 5px);
+    right: auto;
+    z-index: 1000;
+    content: "";
+    display: block;
+    position: absolute;
+    height: 36px;
+    width: 2px;  
+    background-color: tomato;   
+    transform: rotate(135deg);
+    transform-origin: 50% 100% 0;
+}
+
+.right::before{
+    top: calc(50% - 10px);
+    left: auto;
+    right: calc(9%);
+    z-index: 1000;
+    content: "";
+    display: block;
+    position: absolute;
+    height: 36px;
+    width: 2px;  
+    background-color: tomato;   
+    transform: rotate(315deg);
+    transform-origin: 50% 100% 0;
+
+}
+
+
+.right::after{
+    top: calc(50% - 10px);
+    left: auto;
+    right: calc(9%);
+    z-index: 1000;
+    content: "";
+    display: block;
+    position: absolute;
+    height: 36px;
+    width: 2px;  
+    background-color: tomato;   
+    transform: rotate(225deg);
+    transform-origin: 50% 100% 0;
+
+}
