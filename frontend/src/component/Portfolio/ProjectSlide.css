@@ -18,8 +18,18 @@
     padding: 10px;
 }
 
+.slide-wrapper{
+    display: flex;
+    /* width: fit-content; */
+    /* height: fit-content; */
+}
 
-.left:before{
+
+.arrow-wrapper{
+    height: fit-content;
+}
+
+/* .left:before{
     top: calc(50% - 10px);
     left: calc(8% - 5px);
     right: auto;
@@ -32,6 +42,7 @@
     background-color: tomato;
     transform: rotate(45deg);
     transform-origin: 50% 100% 0;
+    cursor: pointer;
 }
 
 .left::after{
@@ -47,6 +58,7 @@
     background-color: tomato;   
     transform: rotate(135deg);
     transform-origin: 50% 100% 0;
+    cursor: pointer;
 }
 
 .right::before{
@@ -80,4 +92,12 @@
     transform: rotate(225deg);
     transform-origin: 50% 100% 0;
 
+}  */
+
+.left-arrow-wrapper{
+    /* display: block;
+    position: absolute;
+    background-color: teal;
+    cursor: pointer;
+    z-index: 1000; */
 }
