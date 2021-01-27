@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import './ProjectSlide.css';
 import ArrowLeftIcon from '@material-ui/icons/ArrowLeft';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
