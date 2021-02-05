@@ -8,7 +8,7 @@
   "description": "this is my porfolio server side",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node ./bin/www",
     "server": "nodemon server.js",
     "frontend-install": "npm install --prefix frontend",
     "frontend": "npm start --prefix frontend",

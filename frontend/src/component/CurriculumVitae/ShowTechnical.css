@@ -1,12 +1,16 @@
-.language-item{
+.language-item ,.framwork-item {
     list-style: none;
     height: 60px;
 }
 
-.showTechnical-wrapper{
+.showTechnical-wrapper , .framwork-item-wrapper{
     background-color:#1f6b66;;
     width: 800px;
     padding-left: 10%;
+}
+
+.framwork-item-wrapper{
+    margin-top: 20px;
 }
 
 @media (max-width: 600px){
