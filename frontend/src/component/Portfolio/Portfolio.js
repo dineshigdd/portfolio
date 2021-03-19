@@ -58,7 +58,8 @@ function Portfolio() {
         headerParser: urlPartOne + "tan-balaur" + urlPartTwo,
         exerciseTracker: urlPartOne + "fossil-capri" + urlPartTwo,
         fileMetadata: urlPartOne + "light-foxtail" + urlPartTwo,
-        urlShortener: urlPartOne + "excessive-octopus" + urlPartTwo
+        urlShortener: urlPartOne + "excessive-octopus" + urlPartTwo,
+        personalLibrary: urlPartOne + "abyssinian-melodic-city" + urlPartTwo
      }
 
 
