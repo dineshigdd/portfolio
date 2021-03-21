@@ -2,6 +2,7 @@ import React from 'react';
 import './Portfolio.css';
 import ProjectSlideFrontEnd from './ProjectSlideFrontEnd';
 import ProjectSlideBackEnd from './ProjectSlideBackEnd';
+import ProjectSlideDataVisualize from './ProjectSlideDataVisualize'
 
 import randomQuote from "../../images/frontend/random-quote.png";
 import drumMachine from "../../images/frontend/drum-machine.png";
@@ -19,6 +20,11 @@ import urlShortener from "../../images/backend/urlShortener.png";
 import personalLibrary from "../../images/backend/personalLibrary.png";
 import CloseIcon from '@material-ui/icons/Close';
 import { useState } from 'react';
+
+import barchart from "../../images/datavisual/barchart.png";
+import scatterplot from "../../images/datavisual/scatterplot.png"
+import heatmap from "../../images/datavisual/heatmap.png";
+import chloromap from "../../images/datavisual/chloromap.png";
 
 
 function Portfolio() {    
@@ -43,6 +49,14 @@ function Portfolio() {
         personalLibrary: personalLibrary
      }
 
+     const dataVisualImages = {
+        barchart: barchart,
+        scatterplot: scatterplot,
+        heatmap: heatmap,
+        chloromap:chloromap
+     }
+
+
      const urlPartOne = "https://glitch.com/embed/#!/embed/";
      const urlPartTwo = "?path=server.js&previewSize=100";
 
@@ -59,7 +73,11 @@ function Portfolio() {
         exerciseTracker: urlPartOne + "fossil-capri" + urlPartTwo,
         fileMetadata: urlPartOne + "light-foxtail" + urlPartTwo,
         urlShortener: urlPartOne + "excessive-octopus" + urlPartTwo,
-        personalLibrary: urlPartOne + "abyssinian-melodic-city" + urlPartTwo
+        personalLibrary: urlPartOne + "abyssinian-melodic-city" + urlPartTwo,
+        barchart:"https://codepen.io/dineshigdd/full/ExNNpRK",
+        scatterplot:"https://codepen.io/dineshigdd/full/GRNmmZz",
+        heatmap: "https://codepen.io/dineshigdd/full/poNWXzo",
+        chloromap:"https://codepen.io/dineshigdd/full/yLVvJqL"
      }
 
 
@@ -91,7 +109,7 @@ function Portfolio() {
         <div>
             <h1 className="master-head">My Work</h1>
             <h3>FreeCodeCamp projects</h3>
-            <h4>FrontEnd Projects</h4>
+            <h4>Frontend Projects</h4>
             <ProjectSlideFrontEnd frondEndImages =  { frondEndImages } displayProject={ displayProject }/>
             <div>
                 { state }
@@ -104,6 +122,9 @@ function Portfolio() {
             
             <h4>Backend Projects</h4>
             <ProjectSlideBackEnd backEndImages = { backEndImages } displayProject={ displayProject }/>
+
+            <h4>Data Visualization Projects</h4>
+            <ProjectSlideDataVisualize dataVisualImages = { dataVisualImages } displayProject={ displayProject }/>
            
            
         </div>
