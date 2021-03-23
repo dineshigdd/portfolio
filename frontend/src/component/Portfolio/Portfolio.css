@@ -6,14 +6,20 @@
 #iframe-wrapper{
     display: inline-flex;
     flex-direction: row-reverse;
+    position: fixed;
+    top:100px;
+    z-index: 1000;
+    
     
 }
 
 #iframe-wrapper > .MuiSvgIcon-root {
-    margin-left: -20px;;
+   /* justify-content: center; */
 }
 
 #dispaly-master{
     border: none;
     border-radius: 5px;
+   
+
 }

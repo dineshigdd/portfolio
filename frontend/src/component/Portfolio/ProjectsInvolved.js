@@ -5,11 +5,11 @@ import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import { Divider } from '@material-ui/core';
 
 
-function ProjectSlide({ ProjectsImages, displayProject }) {
+function ProjectSlide({ projectImages, displayProject }) {
     const [index, setIndex] = useState(0);   
 
-    let images = Object.values(ProjectsImages);  
-    let keys = Object.keys(ProjectsImages);
+    let images = Object.values(projectImages);  
+    let keys = Object.keys(projectImages);
 
   
     const nextImage = () =>{      
@@ -36,16 +36,16 @@ function ProjectSlide({ ProjectsImages, displayProject }) {
         <div className="project-slide-container">        
            
             <li className="project-slide slide-one" onClick={ ()=>displayProject(keys[ 0 + index ]) }>
-                <img src={ images[ 0 + index ] } alt="barchart"/>
+                <img src={ images[ 0 + index ] } alt="acefilmstudios"/>
             </li>
             <li className="project-slide" onClick={ ()=>displayProject(keys[ 1 + index ])}>
-                <img src={ images[1 + index ] } alt="scstterplot"/>
+                <img src={ images[1 + index ] } alt="smartresponse"/>
             </li>
             <li className="project-slide" onClick={ ()=>displayProject(keys[ 2 + index ])}>
-                <img src={ images[2 + index ] } alt="heatmap"/>
+                <img src={ images[2 + index ] } alt="project"/>
             </li>
             <li className="project-slide" onClick={ ()=>displayProject(keys[ 3 + index ])}>
-                <img src={ images[3 + index ] } alt="chloromap"/>    
+                <img src={ images[3 + index ] } alt="project    "/>    
             </li>  
             
         </div> 

@@ -3,7 +3,7 @@ import './Portfolio.css';
 import ProjectSlideFrontEnd from './ProjectSlideFrontEnd';
 import ProjectSlideBackEnd from './ProjectSlideBackEnd';
 import ProjectSlideDataVisualize from './ProjectSlideDataVisualize';
-import ProjectsInvolved from './ProjectSlideFrontEnd';
+import ProjectsInvolved from './ProjectsInvolved';
 
 import randomQuote from "../../images/frontend/random-quote.png";
 import drumMachine from "../../images/frontend/drum-machine.png";
@@ -27,11 +27,14 @@ import scatterplot from "../../images/datavisual/scatterplot.png"
 import heatmap from "../../images/datavisual/heatmap.png";
 import chloromap from "../../images/datavisual/chloromap.png";
 
+import acefilmstudio from "../../images/projectsInvolved/acefilmstudio.png";
+import smartresponse from "../../images/projectsInvolved/smartresponse.png";
+
 
 function Portfolio() {    
     let [ state, setState ] = useState('');
 
-    const frondEndImages = {
+    const frontEndImages = {
         randomQuote: randomQuote,
         drumMachine: drumMachine,
         PomodoroClock: PomodoroClock,
@@ -91,6 +94,7 @@ function Portfolio() {
      }
 
 
+     
     const closePreview = () => {
         setState(null)
         
@@ -120,7 +124,7 @@ function Portfolio() {
             <h1 className="master-head">My Work</h1>
             <h3>FreeCodeCamp projects</h3>
             <h4>Frontend Projects</h4>
-            <ProjectSlideFrontEnd frondEndImages =  { frondEndImages } displayProject={ displayProject }/>
+            <ProjectSlideFrontEnd frontEndImages =  { frontEndImages } displayProject={ displayProject }/>
             <div>
                 { state }
             </div>
@@ -137,7 +141,7 @@ function Portfolio() {
             <ProjectSlideDataVisualize dataVisualImages = { dataVisualImages } displayProject={ displayProject }/>
            
             <h4>Projects I involved in</h4>
-            <ProjectsInvolved projectsImages = { projectsImages  } displayProject = { displayProject }/>
+            <ProjectsInvolved projectImages = { projectImages  } displayProject = { displayProject }/>
         </div>
     )
 }

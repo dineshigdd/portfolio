@@ -5,11 +5,11 @@ import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import { Divider } from '@material-ui/core';
 
 
-function ProjectSlide({ frondEndImages, displayProject }) {
+function ProjectSlide({ frontEndImages, displayProject }) {
     const [index, setIndex] = useState(0);   
 
-    let images = Object.values(frondEndImages);  
-    let keys = Object.keys(frondEndImages);
+    let images = Object.values(frontEndImages);  
+    let keys = Object.keys(frontEndImages);
 
   
     const nextImage = () =>{      
