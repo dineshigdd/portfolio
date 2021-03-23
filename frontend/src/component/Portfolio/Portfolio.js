@@ -2,7 +2,8 @@ import React from 'react';
 import './Portfolio.css';
 import ProjectSlideFrontEnd from './ProjectSlideFrontEnd';
 import ProjectSlideBackEnd from './ProjectSlideBackEnd';
-import ProjectSlideDataVisualize from './ProjectSlideDataVisualize'
+import ProjectSlideDataVisualize from './ProjectSlideDataVisualize';
+import ProjectsInvolved from './ProjectSlideFrontEnd';
 
 import randomQuote from "../../images/frontend/random-quote.png";
 import drumMachine from "../../images/frontend/drum-machine.png";
@@ -56,6 +57,12 @@ function Portfolio() {
         chloromap:chloromap
      }
 
+    
+     const projectImages = {
+         acefilmstudio : acefilmstudio,
+         smartresponse: smartresponse
+     }
+
 
      const urlPartOne = "https://glitch.com/embed/#!/embed/";
      const urlPartTwo = "?path=server.js&previewSize=100";
@@ -77,7 +84,10 @@ function Portfolio() {
         barchart:"https://codepen.io/dineshigdd/full/ExNNpRK",
         scatterplot:"https://codepen.io/dineshigdd/full/GRNmmZz",
         heatmap: "https://codepen.io/dineshigdd/full/poNWXzo",
-        chloromap:"https://codepen.io/dineshigdd/full/yLVvJqL"
+        chloromap:"https://codepen.io/dineshigdd/full/yLVvJqL",
+        acefilmstudio : "https://www.acefilmstudios.com",
+        smartresponse: "https://www.smartresponse.org"
+
      }
 
 
@@ -126,7 +136,8 @@ function Portfolio() {
             <h4>Data Visualization Projects</h4>
             <ProjectSlideDataVisualize dataVisualImages = { dataVisualImages } displayProject={ displayProject }/>
            
-           
+            <h4>Projects I involved in</h4>
+            <ProjectsInvolved projectsImages = { projectsImages  } displayProject = { displayProject }/>
         </div>
     )
 }
