@@ -12,9 +12,11 @@ function ProjectSlide({ frontEndImages, displayProject }) {
     let keys = Object.keys(frontEndImages);
 
   
-    const nextImage = () =>{      
-        if( index >= 0 && index <= 2 ){
-            setIndex( index + 1 );
+    const nextImage = () =>{   
+        if( images.length > 4 ){   
+            if( index >= 0 && index <= 2 ){
+                setIndex( index + 1 );
+            }
         }
     }
    

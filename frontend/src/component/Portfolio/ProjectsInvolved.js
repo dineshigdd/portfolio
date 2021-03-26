@@ -13,8 +13,10 @@ function ProjectSlide({ projectImages, displayProject }) {
 
   
     const nextImage = () =>{      
-        if( index >= 0 && index <= 2 ){
-            setIndex( index + 1 );
+        if( images.length > 4 ){ 
+            if( index >= 0 && index <= 2 ){
+                setIndex( index + 1 );
+            }
         }
     }
    
@@ -42,10 +44,10 @@ function ProjectSlide({ projectImages, displayProject }) {
                 <img src={ images[1 + index ] } alt="smartresponse"/>
             </li>
             <li className="project-slide" onClick={ ()=>displayProject(keys[ 2 + index ])}>
-                <img src={ images[2 + index ] } alt="project"/>
+                {/* <img src={ images[2 + index ] } alt="project"/> */}
             </li>
             <li className="project-slide" onClick={ ()=>displayProject(keys[ 3 + index ])}>
-                <img src={ images[3 + index ] } alt="project    "/>    
+                {/* <img src={ images[3 + index ] } alt="project    "/>     */}
             </li>  
             
         </div> 

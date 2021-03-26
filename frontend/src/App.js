@@ -8,7 +8,11 @@ import CurriculumVitae from './component/CurriculumVitae/CurriculumVitae';
 import HomeButton from './images/home.svg';
 import { createInitialCvUI } from './component/CurriculumVitae/cvInterface';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Portfolio from './component/Portfolio/Portfolio'
+import Portfolio from './component/Portfolio/Portfolio';
+import Resume from './component/Resume/Resume';
+
+
+
 
 
 
@@ -48,8 +52,10 @@ class App extends React.Component {
         this.setState({ currentScreen : <ContactMe /> , footer:''});
         break;
       case "CV":
-          const initialState = createInitialCvUI();
-          this.setState({ currentScreen: <CurriculumVitae initialState= {initialState } /> , footer:''});
+          /*const initialState = createInitialCvUI();
+          this.setState({ currentScreen: <CurriculumVitae initialState= {initialState } /> , footer:''});*/
+          // const initialState = { data: resumePDF };
+          this.setState({ currentScreen: <Resume />, footer:''});
         break;
       case "portfolio":
         this.setState({ currentScreen : <Portfolio /> , footer:''});
