@@ -15,12 +15,11 @@ class AboutMe extends React.Component{
               
                     <div className="col s12 my-description-wrapper">
                         <div>
-                            <p>My name is Dinesh. I am enthiasitice about web developement and programming
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            <p>
+                                I am a full-stack web developer in service for any clients in need of websites and web applications. 
+                                I put in a genuine effort to understand the requirements of the client. I have a client-oriented approach when it comes to web development. 
+                                With my passion for web development and programming, I am fully committed to supporting you reach your business goals 
+                                in a modern competitive market.
                             </p>
                         </div>
                     </div>                   

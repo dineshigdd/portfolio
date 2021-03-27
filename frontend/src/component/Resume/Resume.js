@@ -3,6 +3,7 @@ import './Resume.css';
 import ArrowLeftIcon from '@material-ui/icons/ArrowLeft';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import { Document, Page } from 'react-pdf';
+import { PDFDownloadLink } from '@react-pdf/renderer';
 import resumePDF from "./resume.pdf";
 import { pdfjs } from 'react-pdf';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
@@ -37,17 +38,21 @@ function Resume() {
 
       
         </div>
+        
         {/* <p>
           Page {pageNumber} of {numPages}
         </p> */}
         </>
-        
             
-         
-       
-     
-      
       );
+
+      const App = () => (
+        <div>
+          <PDFDownloadLink document={<Resume />} fileName= { resumePDF }>
+            {({ blob, url, loading, error }) => (loading ? 'Loading document...' : 'Download now!')}
+          </PDFDownloadLink>
+        </div>
+      )
 
 }
 
