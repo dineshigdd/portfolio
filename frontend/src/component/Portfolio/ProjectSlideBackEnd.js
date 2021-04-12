@@ -33,7 +33,7 @@ function ProjectSlide({ backEndImages , displayProject }) {
        
             <ArrowLeftIcon 
                 style={{ fontSize: '6rem', marginTop:'60px' } }
-                onClick={ ()=> nextImage() }/>
+                onClick={ ()=> previousImage() }/>
         
         <div className="project-slide-container">        
            
@@ -54,7 +54,7 @@ function ProjectSlide({ backEndImages , displayProject }) {
        
             <ArrowRightIcon 
                 style={{ fontSize: '6rem', marginTop:'60px' } }
-                onClick = { ()=>previousImage() }/>
+                onClick = { ()=>nextImage() }/>
         
         
         {/* <em className="right"></em> */}
