@@ -19,7 +19,7 @@ import exerciseTracker from "../../images/backend/exerciseTracker.png";
 import fileMetadata from "../../images/backend/fileMetadata.png";
 import urlShortener from "../../images/backend/urlShortener.png";
 import personalLibrary from "../../images/backend/personalLibrary.png";
-import CloseIcon from '@material-ui/icons/Close';
+import CancelRounded from '@material-ui/icons/CancelRounded';
 import { useState } from 'react';
 
 import barchart from "../../images/datavisual/barchart.png";
@@ -104,7 +104,7 @@ function Portfolio() {
         
         setState(   
             <div id="iframe-wrapper">
-            <CloseIcon onClick={ ()=>closePreview()}/>            
+            <CancelRounded fontSize="large" onClick={ ()=>closePreview()}/>            
             <iframe id="dispaly-master"
                 title="Project Preview"
                 width="1000px" 
