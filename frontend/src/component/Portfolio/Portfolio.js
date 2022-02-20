@@ -29,6 +29,7 @@ import chloromap from "../../images/datavisual/chloromap.png";
 
 import acefilmstudio from "../../images/projectsInvolved/acefilmstudio.png";
 import smartresponse from "../../images/projectsInvolved/smartresponse.png";
+import yelpclone from "../../images/projectsInvolved/yelpclone.png";
 
 
 function Portfolio() {    
@@ -63,7 +64,8 @@ function Portfolio() {
     
      const projectImages = {
          acefilmstudio : acefilmstudio,
-         smartresponse: smartresponse
+         smartresponse: smartresponse,
+         yelpclone:yelpclone
      }
 
 
@@ -89,8 +91,8 @@ function Portfolio() {
         heatmap: "https://codepen.io/dineshigdd/full/poNWXzo",
         chloromap:"https://codepen.io/dineshigdd/full/yLVvJqL",
         acefilmstudio : "https://www.acefilmstudios.com",
-        smartresponse: "https://www.smartresponse.org"
-
+        smartresponse: "https://www.smartresponse.org",
+        yelpclone:"https://yelp-clone-dinesh.netlify.app/"
      }
 
 

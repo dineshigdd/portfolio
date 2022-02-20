@@ -44,7 +44,7 @@ function ProjectSlide({ projectImages, displayProject }) {
                 <img src={ images[1 + index ] } alt="smartresponse"/>
             </li>
             <li className="project-slide" onClick={ ()=>displayProject(keys[ 2 + index ])}>
-                {/* <img src={ images[2 + index ] } alt="project"/> */}
+                <img src={ images[2 + index ] } alt="yelpclone"/>
             </li>
             <li className="project-slide" onClick={ ()=>displayProject(keys[ 3 + index ])}>
                 {/* <img src={ images[3 + index ] } alt="project    "/>     */}
